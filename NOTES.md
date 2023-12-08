@@ -1,0 +1,11 @@
+## Notes
+- It uses GraphQL for the API communication
+  - Yep, Apollo. Meta memes!
+  - Initially boring to find the points of interest.
+- The base url is: https://cloud-jarvis.globo.com/graphql/
+  - It's not 100% clear how this is configured for the first time. Maybe I missed something.
+  - Is globo trying to meme Marvel? Would I find that they call some services are called "Thanos"?
+- When globoplay's app is starting (on it's splash screen) it tries to update all of the remote configs, including the base url for the apollo client.
+- The app has a list of hardcoded strings called "scopes". It fetches the remote configs for each scope.
+- It also does some strange memes with the locale for some reason. It just returns a tenant `globo-play` and locale `BR`
+- Although it asks for the location permission, the IP address overrides it. (It's a streaming app, so this is probably fine)
